@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  p 我的课程
+  form(action="/course/delete" method="post")
+    each item in records
+        p
+        input(type="checkbox" name="coursename" value=item.coursename)/
+        = item.coursename
+        br
+    input(type="submit" value="删除")
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/signrecord.js')

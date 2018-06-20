@@ -4,11 +4,13 @@
       .teacherbox
         h3
           | 二维码签到
-        label(for='qrmsg') 创建课程名
+        label(for='qrmsg') 选择课程
         br
         a#generqr(href='#modal-container-41448', role='button', data-toggle='modal') 生成二维码
         div.inputbox
-          input#qrmsg.modal-input(type='text')
+          select#qrmsg.modal-input
+            each item in courses
+              option(value=item.coursename)= item.coursename
         #modal-container-41448.modal.fade(role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
           .modal-dialog
             .modal-content
@@ -20,3 +22,16 @@
               .modal-footer
                 button.hw(data-dismiss='modal') 关闭
         a#signrecord.hw(href='/qr/record') 签到记录
+#teacher.container
+  .row.clearfix
+    .col-md-4.column
+      .teacherbox
+        h3
+          | 我的课程
+        a#signrecord.hw(href='/course/create') 创建课程
+        br
+        a#signrecord.hw(href='/course/record') 我的课程
+        
+        
+        
+        
