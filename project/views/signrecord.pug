@@ -1,0 +1,11 @@
+extends layout
+
+block content
+  .sign-record-box
+    each item, index in records
+      ul.sign-record-item
+        p.sign-record-date= "("+class_title[index] +")"+ index
+        each val in item
+          li= val
+  script(src='/javascripts/jquery.js')
+  script(src='/javascripts/signrecord.js')
