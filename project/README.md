@@ -22,3 +22,9 @@
 ## 用到的框架和库
 
 `Node.js` `Express.js` `express-session` `pug` `Bootstrap` `MongoDB` `qr-image` `bcrypt` `multer`
+
+## 运行
+```shell
+npm install
+npm start
+```
