@@ -1,13 +1,14 @@
 extends layout
 
 block content
-  p 我的课程
-  form(action="/course/delete" method="post")
+  h1#course-h3.display-2 我的课程
+  hr(style="FILTER: alpha(opacity=100,finishopacity=0,style=3)" width="60%" color="#987cb9" SIZE=3 )
+  form#delete-course(action="/course/delete" method="post")
     each item in records
-        p
-        input(type="checkbox" name="coursename" value=item.coursename)/
-        = item.coursename
+        .form-check
+          input.form-check-input(type="checkbox" name="coursename" value=item.coursename)/
+          label.form-check-label(for="")= item.coursename
         br
-    input(type="submit" value="删除")
+    input.btn.btn-danger(type="submit" value="删除")
   script(src='/javascripts/jquery.js')
   script(src='/javascripts/signrecord.js')

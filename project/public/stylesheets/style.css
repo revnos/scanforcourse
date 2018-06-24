@@ -6,7 +6,6 @@
 
 body {
 	font: 14px 微软雅黑, Helvetica, Arial, sans-serif;
-	background: white;
 	position: relative;
 }
 
@@ -105,9 +104,10 @@ body {
 /*==============================================*/
 
 header {
-	background-color: #303848;
+	
+	background: #303848;
 	padding: 10px;
-	font-size: 2em;
+	font-size: 3em;
 	margin-bottom: 10px;
 	overflow: auto;
 }
@@ -171,6 +171,7 @@ a.navbar-brand:before {
 	margin-top: 30px;
 	color: #000;
 }
+
 
 
 #signup-tab,
@@ -391,7 +392,7 @@ p.sign-record-date {
 /*==============================================*/
 
 
-/*交作业样式*/
+/*课程样式*/
 
 
 /*==============================================*/
@@ -515,4 +516,32 @@ textarea#hwmsg {
 	border: 1px solid #777;
 	border-radius: 4px;
 	outline: none;
+}
+
+
+/*==============================================*/
+
+
+/*删除课程样式*/
+
+
+/*==============================================*/
+
+#course-h3{
+	margin-top: 40px;
+	text-align: center;
+}
+form#delete-course{
+	margin-top: 10px;
+	text-align: center;
+	margin: 2em auto;
+	transform: translateY(40%);
+	
+}
+
+hr{
+	position: relative;
+	left: 50%;
+	transform: translateX(-50%);
+	margin-top: 50px; 
 }
