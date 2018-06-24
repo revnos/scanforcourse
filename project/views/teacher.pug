@@ -8,7 +8,7 @@
         br
         a#generqr(href='#modal-container-41448', role='button', data-toggle='modal') 生成二维码
         div.inputbox
-          select#qrmsg.modal-input
+          select#qrmsg.modal-input.custom-select
             each item in courses
               option(value=item.coursename)= item.coursename
         #modal-container-41448.modal.fade(role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
@@ -20,10 +20,9 @@
               .modal-body
                 #qrsvg
               .modal-footer
-                button.hw(data-dismiss='modal') 关闭
+                button.hw(data-dismiss='modal', aria-label="Close") 关闭
         a#signrecord.hw(href='/qr/record') 签到记录
-#teacher.container
-  .row.clearfix
+
     .col-md-4.column
       .teacherbox
         h3
